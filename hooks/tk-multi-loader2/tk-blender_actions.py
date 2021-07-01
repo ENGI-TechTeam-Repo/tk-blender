@@ -269,7 +269,7 @@ class BlenderActions(HookBaseClass):
         # toolkit uses utf-8 encoded strings internally and Blender API
         # expects unicode so convert the path to ensure filenames containing
         # complex characters are supported
-        path = self.get_publish_path(sg_publish_data).replace(os.path.sep, "/")
+        path = self.get_publish_path(sg_publish_data)
 
         if name == "link":
             self._create_link(path, sg_publish_data)
